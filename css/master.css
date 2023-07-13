@@ -1,0 +1,71 @@
+/* aplicando css global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+
+/* ===aplicando css al emncabezado== */
+
+#logo {
+  width: 50%;
+  margin: auto;
+  padding-top: 10px;
+}
+#menu {
+  text-align: center;
+}
+
+/*=== Aplicando comportamiento resposive o adaptativo===*/
+/* Medium devices (tablets, 768px and up)*/
+/* trabajando con css grid */
+@media (min-width: 768px) {
+  /* aplicando css al encabezado */
+  #encabezado {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+  #menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  #opcionesizquierdo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #opcionesderecho {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* aplicando css a la seccion productos */
+
+  #productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* aplicando css a la galeria */
+
+  section#galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  section#galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
